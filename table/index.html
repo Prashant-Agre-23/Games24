@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Rummy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <section class="wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center">
+          <img src="images/effect1.png" alt="Logo" class="img-fluid effect effect1">
+          <img src="images/logo.png" alt="Logo" class="img-fluid logo">
+          <img src="images/effect2.png" alt="Logo" class="img-fluid effect effect2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <fieldset class="field-container float-right">
+            <input type="text" placeholder="Enter your Login ID" class="field" />
+            <div class="icons-container">
+              <div class="icon-search"></div>
+              <div class="icon-close">
+                <div class="x-up"></div>
+                <div class="x-down"></div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 rummy-table" id="style-1">
+          <div class="mCustomScrollbar" data-mcs-theme="dark">
+              <table class="table content">
+                <thead>
+                  <tr>
+                    <th scope="col">Rank</th>
+                    <th scope="col">Login ID</th>
+                    <th scope="col">Prize</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <img src="images/prize1.png" alt="Prize 1" class="prize animate__animated animate__bounceIn ">
+                    </th>
+                    <td class="text-yellow">username1</td>
+                    <td class="text-white">1000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <img src="images/prize2.png" alt="Prize 2" class="prize animate__animated animate__bounceIn animate__delay-1s animate__faster">
+                    </th>
+                    <td class="text-yellow">username2</td>
+                    <td class="text-white">900</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <img src="images/prize3.png" alt="Prize 3" class="prize animate__animated animate__bounceIn animate__delay-2s animate__faster">
+                    </th>
+                    <td class="text-yellow">username3</td>
+                    <td class="text-white">800</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="numberCircle">4</div>
+                    </th>
+                    <td class="text-yellow">username4</td>
+                    <td class="text-white">700</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="numberCircle">5</div>
+                    </th>
+                    <td class="text-yellow">username5</td>
+                    <td class="text-white">600</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="numberCircle">6</div>
+                    </th>
+                    <td class="text-yellow">username6</td>
+                    <td class="text-white">500</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="numberCircle">7</div>
+                    </th>
+                    <td class="text-yellow">username7</td>
+                    <td class="text-white">700</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="numberCircle">8</div>
+                    </th>
+                    <td class="text-yellow">username8</td>
+                    <td class="text-white">600</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="numberCircle">9</div>
+                    </th>
+                    <td class="text-yellow">username9</td>
+                    <td class="text-white">500</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="numberCircle">10</div>
+                    </th>
+                    <td class="text-yellow">username10</td>
+                    <td class="text-white">700</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="numberCircle">11</div>
+                    </th>
+                    <td class="text-yellow">username11</td>
+                    <td class="text-white">600</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="numberCircle">12</div>
+                    </th>
+                    <td class="text-yellow">username12</td>
+                    <td class="text-white">500</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      
+      $('.field').on('focus', function() {
+        $('body').addClass('is-focus');
+      });
+      
+      $('.field').on('blur', function() {
+        $('body').removeClass('is-focus is-type');
+      });
+      
+      $('.field').on('keydown', function(event) {
+        $('body').addClass('is-type');
+        if((event.which === 8) && $(this).val() === '') {
+          $('body').removeClass('is-type');
+        }
+      });
+
+      $(".content").mCustomScrollbar({
+          axis:"yx" // horizontal scrollbar
+      });
+      
+    });
+  </script>
+</body>
+
+</html>

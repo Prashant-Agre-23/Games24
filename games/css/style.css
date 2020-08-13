@@ -1,0 +1,209 @@
+body{
+	font-family: 'Aller';
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+}
+*{
+	box-sizing: border-box;
+}
+.rummy-bg{
+	background:url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 680px;
+	position:relative;
+	display: flex; 
+}
+.logo{
+	width: 224px;
+}
+.logo img{
+	display: block;
+	vertical-align: middle;
+	max-width: 100%;
+}
+.main-section{
+	width: calc(100% - 224px);
+    padding: 10px 10px 0 0;
+}
+.deposit-play-win > div{
+	padding: 10px;
+}
+.title{
+	font-size: 21px;
+    background-color: #ff981f;
+    background-image: linear-gradient(#fdfcaf,#ff981f);
+    color: #663107;
+    padding: 10px 27px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 30px;
+}
+.total-price-pool{
+	background: url(../images/total-price-pool-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding: 30px 20px;
+}
+.total-price-pool-title{
+	color: #fff;
+	margin: 0;
+	font-size: 13px;
+}
+
+.promocode-section{
+	display: flex;
+	justify-content: center;
+}
+.promocode-section .promo-title{
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	display: inline;
+	padding: 5px 10px;
+	font-family: Arial;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+}
+.promocode-section .promo-code{
+	background-color: #fff;
+	color: #ed1c24;
+	display: inline;
+	text-transform: uppercase;
+	font-family: Arial;
+    font-weight: normal;
+	padding: 5px 10px;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+	font-size: 17px;
+	font-weight: bold;
+}
+.bonus {
+	margin: 0 0 5px;
+	font-size: 43px;
+	color:#d10303;
+  	text-shadow: 1px 0px 0px #fbf679, 0px 0px 0 #FBF679, 0px -1px 0 #fbf679, 0px 1px 0 #fbf679, 1px 0px 0 #fbf679
+}
+.bonus sup{
+	font-size: 11px;
+}
+.deposit-play-win{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.deposit-play-win img{
+	width: 100%;
+	padding: 0;
+}
+button {
+	cursor: pointer;
+    position: relative;
+    padding: 10px 30px;
+    border-radius: 10px;
+    line-height: 2.5rem;
+    font-size: 20px;
+    font-weight: 600;
+
+	border: 1px solid #012880;
+	background-image: linear-gradient(-180deg, #ff89d6 0%, #c01f9e 100%);
+	box-shadow: 0 1rem 1.25rem 0 rgba(22, 75, 195, 0.5),
+		0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+		0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
+		0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+}
+
+button span {
+	color: transparent;
+	background-image: linear-gradient(0deg, #ee82da 0%, #fefafd 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	filter: drop-shadow(0 2px 2px hsla(290, 100%, 20%, 1));
+}
+
+button::before {
+	content: "";
+	display: block;
+	height: 0.25rem;
+	position: absolute;
+	top: 0.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 7.5rem);
+	background: #fff;
+	border-radius: 100%;
+
+	opacity: 0.7;
+	background-image: linear-gradient(
+		-270deg,
+		rgba(255, 255, 255, 0) 0%,
+		#ffffff 20%,
+		#ffffff 80%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}
+
+.cta-section{
+	display: block;
+}
+.cta-section img{
+	display: block;
+	margin: auto;
+}
+
+@media only screen and (max-width: 679px){
+	img{
+		max-width: 100%;
+		display: block;
+	}
+	.rummy-bg{
+	    width: 100%;
+    	flex-wrap: wrap;
+	    padding-bottom: 40px;
+	    padding-top: 30px;
+	}
+	.logo {
+    	width: 100%;
+	}
+	.logo img{
+		margin: auto;
+	}
+	.main-section {
+    width: 100%;
+	padding: 10px 0 0;
+	}
+	.title {
+		width: 90%;
+		margin: auto;
+		font-size: 14px;
+		padding: 10px 14px;
+	}
+	.total-price-pool{
+		width: 70%;
+	}
+	.total-price-pool-title{
+	    margin: 0 0 5px;
+	}
+	.deposit-play-win{
+		flex-wrap: wrap;
+	    width: 100%;
+	    margin-top: 5px;
+	}
+	.deposit-play-win div {
+    	width: calc(80% / 3);
+	}
+	.deposit-play-win div.arrow{
+		width: 10%;
+	}
+	.cta-section{
+	    width: 50%;
+	    margin: auto;
+	}
+}
